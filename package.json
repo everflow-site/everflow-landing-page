@@ -1,0 +1,98 @@
+{
+  "name": "everflow-interface",
+  "homepage": ".",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@davatar/react": "1.8.1",
+    "@headlessui/react": "1.6.1",
+    "@types/lodash": "4.14.198",
+    "@types/node": "18.7.13",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@types/react-router-dom": "5.3.3",
+    "classnames": "2.3.1",
+    "date-fns": "2.27.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-recommended": "4.1.0",
+    "ethers": "5.6.8",
+    "framer-motion": "4.1.17",
+    "lodash": "4.17.21",
+    "query-string": "7.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet-async": "2.0.4",
+    "react-hot-toast": "2.2.0",
+    "react-icons": "4.3.1",
+    "react-loading-skeleton": "3.3.1",
+    "react-remove-scroll": "2.5.5",
+    "react-router-dom": "5.3.0",
+    "react-scripts": "5.0.1",
+    "react-select": "5.2.1",
+    "react-tabs": "3.2.3",
+    "react-toastify": "6.0.9",
+    "react-use": "17.3.1",
+    "sass": "1.55.0",
+    "swr": "2.2.1",
+    "typescript": "4.7.4",
+    "web-vitals": "1.1.2"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "scripts": {
+    "start": "PORT=3010 react-app-rewired start",
+    "deploy": "yarn build && npx thirdweb@latest upload build",
+    "build": "INLINE_RUNTIME_CHUNK=false react-app-rewired build",
+    "eject": "react-scripts eject",
+    "lint": "node node_modules/.bin/eslint src",
+    "tscheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-console": "warn"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not ie <= 99",
+      "not android <= 4.4.4",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "./jest-env.js"
+    ]
+  },
+  "devDependencies": {
+    "buffer": "6.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-perf": "3.3.2",
+    "lint-staged": "12.3.4",
+    "prettier": "2.5.1",
+    "react-app-rewired": "2.2.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix --max-warnings=0 ./src",
+      "prettier --write"
+    ]
+  }
+}

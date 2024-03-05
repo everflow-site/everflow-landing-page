@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px;
+  padding: 10px;
+  max-width: 265px;
+}
+
+/* .liquidity-image {
+
+} */
+
+.liquidity-title {
+  font-size: var(--font-md);
+  color: #000000;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.liquidity-description {
+  color: #545454;
+  /* text-align: center; */
+}
