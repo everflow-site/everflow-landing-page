@@ -3,25 +3,13 @@ import AddressDropdown from "../AddressDropdown/AddressDropdown";
 import cx from "classnames";
 import "./Header.css";
 
-type Props = {
-  openSettings: () => void;
-  small?: boolean;
-  disconnectAccountAndCloseSettings: () => void;
-  redirectPopupTimestamp: number;
-  showRedirectModal: (to: string) => void;
-  tradePageVersion: number;
-};
 
+export function AppHeaderUser() {
 
-export function AppHeaderUser({
-  openSettings,
-  small,
-  disconnectAccountAndCloseSettings,
-  redirectPopupTimestamp,
-  showRedirectModal,
-  tradePageVersion,
-}: Props) {
-
+  const openPdfInNewTab = () => {
+    const pdfUrl = 'Everflow_whitepaper_2024.pdf';
+    window.open(pdfUrl, '_blank');
+  };
 
 
     return (
@@ -38,8 +26,9 @@ export function AppHeaderUser({
                 boxShadow: "0px 3px 4px 0px #00000026", 
               }}
               className="doc-button"
+              onClick={openPdfInNewTab}
             >
-              Comming Soon
+              Whitepaper
             </button>
           
         </div>

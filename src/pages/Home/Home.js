@@ -6,8 +6,7 @@ import swapIcon from "img/swap.png";
 import transactionIcon from "img/transaction.png";
 import stockMarketIcon from "img/stock-market.png";
 import groupIcon from "img/liquidity.png";
-import useSWR from "swr";
-import etherumIcon from "img/ic_eth_40.svg";
+import uniswapIcon from "img/uniswap.svg";
 
 import LiquidityCard from "./LiquidityCard";
 import { useEffect, useState } from "react";
@@ -47,11 +46,11 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         console.log(data);
         if(data) {
           const marketcap = data.pair.priceUsd * 1000000000;
-          const tradingVolume = data.pair.volume.h24;
+          // const tradingVolume = data.pair.volume.h24;
           const totalLiquidity = data.pair.liquidity.usd;
           setMarketData({
             marketcap: formatter.format(marketcap),
-            tradingVolume: formatter.format(tradingVolume),
+            tradingVolume: "1,000,000K",
             totalLiquidity: formatter.format(totalLiquidity),
           });
         }
@@ -92,6 +91,15 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </div>
         </div>
         <div className="Home-latest-info-container default-container">
+        <div className="Home-latest-info-block">
+            <img src={transactionIcon} alt="Open Interest Icon" className="Home-latest-info__icon" />
+            <div className="Home-latest-info-content">
+              <div className="Home-latest-info__title">
+                <div>Circulating Supply</div>
+              </div>
+              <div className="Home-latest-info__value">{marketData.tradingVolume}</div>
+            </div>
+          </div>
           <div className="Home-latest-info-block">
             <img src={stockMarketIcon} alt="Total Trading Volume Icon" className="Home-latest-info__icon" />
             <div className="Home-latest-info-content">
@@ -99,15 +107,6 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                 <div>Marketcap</div>
               </div>
               <div className="Home-latest-info__value">{marketData.marketcap}</div>
-            </div>
-          </div>
-          <div className="Home-latest-info-block">
-            <img src={transactionIcon} alt="Open Interest Icon" className="Home-latest-info__icon" />
-            <div className="Home-latest-info-content">
-              <div className="Home-latest-info__title">
-                <div>Daily Trading Volume</div>
-              </div>
-              <div className="Home-latest-info__value">{marketData.tradingVolume}</div>
             </div>
           </div>
           <div className="Home-latest-info-block">
@@ -125,21 +124,22 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         <div className="Home-cta-container default-container">
           <div className="Home-cta-info">
             <div className="Home-cta-info__title">
-              <div>Available on your preferred network</div>
+              <div>Everflow Token</div>
             </div>
             <div className="Home-cta-info__description">
               <div>EFT Token has launched on Uniswap <b>(Ethereum)</b>
                 <br />
-                Total supply as Liquidity</div>
+                Applied a <b>2%</b> tax on token purchases and sales - the resulting auto-buyback liquidity will contribute to the initial supply on the <b>Blast</b> Chain at a later stage.
+                <br/><br/> <b>Token Contract address :</b> <a className="scan-link" href="https://etherscan.io/token/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676" target="_blank">0xf86cFCE1e746456135d7fACe48c2916D7D3cb676</a> </div>
             </div>
           </div>
           <div className="Home-cta-options">
             <div className="Home-cta-option">
               <div className="Home-cta-option-icon">
-                <img src={etherumIcon} width="90" alt="Etherum Icon" />
+                <img src={uniswapIcon} width="90" alt="Uniswap Logo" />
               </div>
               <div className="Home-cta-option-info">
-                <div className="Home-cta-option-title">Ethereum</div>
+                <div className="Home-cta-option-title">Uniswap</div>
                 <div className="Home-cta-option-action">
                   {/* <LaunchExchangeButton /> */}
                   <button onClick={() => openLink("https://app.uniswap.org/swap?chain=mainnet&outputCurrency=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&inputCurrency=ETH")} className="Home-cta-option-action-btn">Get $EFT</button>

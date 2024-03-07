@@ -104,13 +104,7 @@ export function Header({
               <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
           </div>
           <div className="App-header-container-right">
-            <AppHeaderUser
-              disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
-              openSettings={openSettings}
-              redirectPopupTimestamp={redirectPopupTimestamp}
-              showRedirectModal={showRedirectModal}
-              tradePageVersion={tradePageVersion}
-            />
+            <AppHeaderUser />
           </div>
         </div>
         <div className={cx("App-header", "small", { active: isDrawerVisible })}>
@@ -130,14 +124,7 @@ export function Header({
               </div>
             </div>
             <div className="App-header-container-right">
-              <AppHeaderUser
-                disconnectAccountAndCloseSettings={disconnectAccountAndCloseSettings}
-                openSettings={openSettings}
-                small
-                redirectPopupTimestamp={redirectPopupTimestamp}
-                showRedirectModal={showRedirectModal}
-                tradePageVersion={tradePageVersion}
-              />
+              <AppHeaderUser />
             </div>
           </div>
         </div>
