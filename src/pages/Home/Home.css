@@ -18,15 +18,15 @@
 
 .background-image {
   position: absolute;
-  top: -20%;
-  right: 5%;
+  /* top: -20%; */
+  /* right: 5%; */
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   background-position: right;
-  background-image: url("img/background.png");
+  background-image: url("img/background.svg");
   width: 100vw;
   height: 100vh;
-  opacity: 0.3;
+  /* opacity: 0.8; */
 }
 
 .Home-top::before {
@@ -85,9 +85,9 @@
 }
 
 .Home-title-action-button {
-  padding: 20px 30px;
+  padding: 15px 25px;
   border-radius: 100px;
-  margin: 10px;
+  margin: 20px;
   border: none;
   color: #ffffff;
   font-size: 18px;
@@ -98,7 +98,7 @@
 .Home-title-action-button:hover {
   transition: all 0.3s ease;
   /* background-color: #20a6ff ; */
-  background-color: rgba(0, 0, 255, 0.6) !important;
+  background-color: rgb(132, 163, 189) !important;
 }
 
 .Home-benefits-section {

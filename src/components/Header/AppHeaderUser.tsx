@@ -17,12 +17,12 @@ export function AppHeaderUser() {
         <div className={cx("App-header-trade-link", { "homepage-header": true })}>
             <button
               style={{
-                backgroundColor: '#0E50E2',
-                padding: "10px 20px",
+                backgroundColor: '#FFFFFF',
+                padding: "10px 23px",
                 borderRadius: "100px",
                 margin: 5,
                 border: "none",
-                color: "#ffffff",
+                color: "#000000",
                 boxShadow: "0px 3px 4px 0px #00000026", 
               }}
               className="doc-button"

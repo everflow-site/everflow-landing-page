@@ -163,7 +163,8 @@
 
 .doc-button:hover {
   transition: all 0.3s ease;
-  background-color: rgba(0, 0, 255, 0.6) !important;
+  cursor: pointer;
+  background-color: rgb(132, 163, 189) !important;
 }
 
 .App-header .a,

@@ -6,7 +6,7 @@ import swapIcon from "img/swap.png";
 import transactionIcon from "img/transaction.png";
 import stockMarketIcon from "img/stock-market.png";
 import groupIcon from "img/liquidity.png";
-import uniswapIcon from "img/uniswap.svg";
+import uniswapIcon from "img/uniswap.png";
 
 import LiquidityCard from "./LiquidityCard";
 import { useEffect, useState } from "react";
@@ -85,8 +85,8 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
             </div>
             <div className="Home-title-action">
-              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")} style={{ backgroundColor: '#02A6F2' }}>Team Finance</TitleActionButton>
-              <TitleActionButton onClick={() => openLink("https://dexscreener.com/ethereum/0x8770c1cfb7b15f792d8940dee258a0f611ef785c")}>Dexscreneer</TitleActionButton>
+              <TitleActionButton onClick={() => openLink("https://www.cyberscope.io/audits/5-eft")}>Token Audit</TitleActionButton>
+              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")}  style={{ backgroundColor: '#FFFFFF', color: "#000000" }}>Team Finance</TitleActionButton>
             </div>
           </div>
         </div>
