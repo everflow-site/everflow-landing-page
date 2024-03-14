@@ -4,8 +4,8 @@ import everflowImage from "img/everflow-logo.png";
 function SEO(props) {
   const { children, ...customMeta } = props;
   const meta = {
-    title: `EVERFLOW | Decentralized Perpetual Exchange`,
-    description: `Trade spot or perpetual BTC, ETH, AVAX and other top cryptocurrencies with up to 50x leverage directly from your wallet on Arbitrum and Avalanche.`,
+    title: `Everflow | Decentralized Perpetual Exchange`,
+    description: `Trade spot or perpetual BTC, ETH and other top cryptocurrencies with up to 20x leverage directly from your wallet on Blast L2.`,
     image: everflowImage,
     type: "exchange",
     ...customMeta,

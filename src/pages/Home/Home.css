@@ -24,6 +24,7 @@
   background-size: cover;
   background-position: right;
   background-image: url("img/background.svg");
+  background-position: left;
   width: 100vw;
   height: 100vh;
   /* opacity: 0.8; */
@@ -97,6 +98,7 @@
 
 .Home-title-action-button:hover {
   transition: all 0.3s ease;
+  color: white !important;
   /* background-color: #20a6ff ; */
   background-color: rgb(132, 163, 189) !important;
 }
@@ -157,7 +159,7 @@
 }
 
 .Home-cta-info {
-  max-width: 65.4rem;
+  width: 80%;
 }
 
 .Home-cta-info__title {
@@ -175,6 +177,7 @@
   letter-spacing: 0;
   color: #101124;
   margin-bottom: 5rem;
+  width: auto;
 }
 
 .Home-cta-options {
@@ -223,7 +226,7 @@
 }
 .Home-cta-option-action-btn:hover {
   transition: all 0.3s ease;
-  background-color: rgba(0, 0, 255, 0.6);
+  background-color: rgb(132, 163, 189) !important;
 }
 
 .Home-cta-button {
@@ -565,6 +568,13 @@
   .Home-token-card-container {
     flex-direction: column;
   }
+
+  .Home-cta-info__title {
+    font-size: 30px;
+    line-height: 4rem;
+    font-weight: bold;
+  }
+  
 }
 
 @media (max-width: 500px) {

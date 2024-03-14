@@ -85,8 +85,8 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               </div>
             </div>
             <div className="Home-title-action">
-              <TitleActionButton onClick={() => openLink("https://www.cyberscope.io/audits/5-eft")}>Coinscope Audit</TitleActionButton>
-              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")}  style={{ backgroundColor: '#FFFFFF', color: "#000000" }}>Team Finance</TitleActionButton>
+              <TitleActionButton onClick={() => openLink("https://www.cyberscope.io/audits/5-eft")}>Contract Audit</TitleActionButton>
+              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")}  style={{ backgroundColor: '#FFFFFF', color: "#000000"}}>Team Finance</TitleActionButton>
             </div>
           </div>
         </div>

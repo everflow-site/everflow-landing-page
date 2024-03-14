@@ -326,6 +326,15 @@
   .App-header-link-main img.small {
     display: inline-block;
   }
+
+  .doc-button {
+    background-color: rgb(14, 80, 226) !important;
+    color: white !important;
+  }
+  
+  .doc-button:hover {
+    background-color: rgb(132, 163, 189) !important;
+  }
 }
 
 @media (max-width: 450px) {
