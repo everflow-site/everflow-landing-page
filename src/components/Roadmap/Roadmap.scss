@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Manrope:wght@200..800&display=swap');
+$primaryColor: #0e50e2;
+$lineBorder: #cad7f4;
+
+.font-manrope {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-assistant {
+  font-family: 'Assistant', sans-serif;
+}
+
+.b-500 {
+  font-weight: 500;
+}
+
+.b-600 {
+  font-weight: 600;
+}
+
+.b-700 {
+  font-weight: 700;
+}
+
+.h-100 {
+  height: 100px
+}
+
+.mt-80 {
+  margin-top: 80px
+}
+
+.mt-20 {
+  margin-top: 20px
+}
+
+.pb-5 {
+  padding-bottom: 5px
+}
+
+.pl-10 {
+  padding-left: 10px
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.roadmap-container {
+  color: black;
+  min-height: 100vh;
+  background-color: rgba(181, 214, 255, 0.15);
+  // background: rgba(255, 255, 255, 0.2);
+  padding-top: 100px;
+}
+
+.roadmap-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 0;
+}
+
+.roadmap-heeader-title {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roadmap-header-divider {
+  width: 200px;
+  height: 6px;
+  margin: 10px 0px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) -0.22%, #0e50e2 99.78%);
+}
+
+.roadmap-header-subtitle {
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.just-item-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  // width: 100vw;
+  padding: 100px;
+}
+
+.timeline-dot {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
+  width: 250px;
+  height: 200px;
+}
+
+.timeline-dot-outer {
+  position: absolute;
+  z-index: 2;
+  width: 40px; /* Diameter of the dot */
+  height: 40px; /* Diameter of the dot */
+  background-color: #0E50E21A; /* Color of the dot */
+  border-radius: 50%; /* Shape the dot as a circle */
+}
+
+.timeline-dot-outer.active {
+  box-shadow: $primaryColor 0px 0px 24px -2px;
+}
+
+.timeline-label-active{
+  box-shadow: #000 0px 0px 2px -1px;
+  border-radius: 10px;
+}
+
+.timeline-label-active-label{
+  padding: 14px 18px;
+  text-align: center;
+  background: rgba(14, 80, 226, 0.05);
+  color: $primaryColor;
+}
+
+.timeline-label-active-date{
+  background: #3D72E7;
+  color: #FFF;
+  padding: 10px 22px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.timeline-dot-inner {
+  position: relative;
+  width: 20px; /* Diameter of the dot */
+  height: 20px; /* Diameter of the dot */
+  background-color: $primaryColor; /* Color of the dot */
+  border-radius: 50%; /* Shape the dot as a circle */
+  cursor: pointer;
+}
+
+.timeline-dot-line-horizontal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 200px;
+  background: $primaryColor;
+  border-radius: 10px; /* Shape the dot as a circle */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 49.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px; /* Height of the line */
+  width: calc(100%); /* Adjust to leave space for dots */
+  background: $lineBorder;
+}
+.timeline-line-2 {
+  position: absolute;
+  top: 49.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10px; /* Height of the line */
+  background: $lineBorder;
+}
+
+.timeline-line-dotted {
+  position: absolute;
+  border-bottom: 3px dotted $primaryColor;
+}
+
+.timeline-section-bottom {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  padding-left: 20px;
+  height: 400px;
+  width: 220px;
+}
+
+.timeline-section-top {
+  position: absolute;
+  left: 20px;
+  height: 400px;
+  width: 220px;
+  top: -100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rotate-180 {
+  rotate: 180deg;
+}
+
+.relative {
+  position: relative;
+}
+.text-primary {
+  color: $primaryColor
+}
+
+.m-timeline {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.m-timeline-content {
+  display: flex;
+  top: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.m-timeline-line {
+  width: 10px; /* Adjust to leave space for dots */
+  background: $lineBorder;
+}
+
+.m-timeline-dot {
+  display: flex;
+  position: relative;
+  width: calc(100vw - 40px);
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.m-timeline-dot-line-horizontal {
+  position: absolute;
+  width: 48vw;
+  height: 2px;
+  background: $primaryColor;
+  border-radius: 10px; /* Shape the dot as a circle */
+}
+
+.m-timeline-dot-active {
+  position: absolute;
+  top: 0;
+  left: 50.3%;
+  transform: translateX(-50%);
+  border-left: 5px dotted $primaryColor;
+  width: 10px;
+}
+
+.m-timeline-label-active-date{
+  background: #3D72E7;
+  color: #FFF;
+  padding: 10px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.m-timeline-label-active-label{
+  padding: 14px 10px;
+  text-align: center;
+  background: rgba(14, 80, 226, 0.05);
+  color: $primaryColor;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+
+
+@media (max-width: 500px) {
+  .roadmap-heeader-title {
+    font-size: 30px;
+  }
+  .roadmap-header-subtitle {
+    font-size: 16px;
+  }
+}

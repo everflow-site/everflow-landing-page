@@ -1,6 +1,6 @@
 .Home {
   min-height: 100vh;
-  padding-bottom: calc(4.65rem + 20rem);
+  padding-bottom: 20rem;
   background: white;
 }
 
@@ -147,7 +147,7 @@
 }
 
 .Home-cta-section {
-  background: #f9fafc;
+  background: rgba(181, 214, 255, 0.15);
 }
 
 .Home-cta-container {

@@ -10,6 +10,7 @@ import uniswapIcon from "img/uniswap.png";
 
 import LiquidityCard from "./LiquidityCard";
 import { useEffect, useState } from "react";
+import Roadmap from "components/Roadmap/Roadmap";
 
 export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   const TitleActionButton = ({ children, onClick, className, style = { backgroundColor: '#0E50E2' } }) => {
@@ -44,7 +45,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
 
         // Assuming your API response has properties like marketcap, tradingVolume, totalLiquidity
         console.log(data);
-        if(data) {
+        if (data) {
           const marketcap = data.pair.priceUsd * 1000000000;
           // const tradingVolume = data.pair.volume.h24;
           const totalLiquidity = data.pair.liquidity.usd;
@@ -63,7 +64,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   }, []);
 
   const openLink = (link) => {
-    window.open(link, "_blank") 
+    window.open(link, "_blank")
   }
 
   return (
@@ -86,12 +87,12 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
             </div>
             <div className="Home-title-action">
               <TitleActionButton onClick={() => openLink("https://www.cyberscope.io/audits/5-eft")}>Contract Audit</TitleActionButton>
-              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")}  style={{ backgroundColor: '#FFFFFF', color: "#000000"}}>Team Finance</TitleActionButton>
+              <TitleActionButton onClick={() => openLink("https://www.team.finance/view-coin/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676?name=Everflow%20Token&symbol=EFT&chainid=0x1")} style={{ backgroundColor: '#FFFFFF', color: "#000000" }}>Team Finance</TitleActionButton>
             </div>
           </div>
         </div>
         <div className="Home-latest-info-container default-container">
-        <div className="Home-latest-info-block">
+          <div className="Home-latest-info-block">
             <img src={transactionIcon} alt="Open Interest Icon" className="Home-latest-info__icon" />
             <div className="Home-latest-info-content">
               <div className="Home-latest-info__title">
@@ -130,7 +131,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
               <div>EFT Token has launched on Uniswap <b>(Ethereum)</b>
                 <br />
                 Applied a <b>2%</b> tax on token purchases and sales - the resulting auto-buyback liquidity will contribute to the initial supply on the <b>Blast</b> Chain at a later stage.
-                <br/><br/> <b>Token Contract address :</b> <a className="scan-link" href="https://etherscan.io/token/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676" target="_blank">0xf86cFCE1e746456135d7fACe48c2916D7D3cb676</a> </div>
+                <br /><br /> <b>Token Contract address :</b> <a className="scan-link" href="https://etherscan.io/token/0xf86cFCE1e746456135d7fACe48c2916D7D3cb676" target="_blank">0xf86cFCE1e746456135d7fACe48c2916D7D3cb676</a> </div>
             </div>
           </div>
           <div className="Home-cta-options">
@@ -166,6 +167,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           description="Stake EFT tokens to enjoy significantly lower trading fees compared to other platforms."
         />
       </div>
+      <Roadmap />
       <Footer showRedirectModal={showRedirectModal} redirectPopupTimestamp={redirectPopupTimestamp} />
     </div>
   );
