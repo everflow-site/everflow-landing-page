@@ -5,7 +5,10 @@ module.exports = function override(config) {
     os: false,
     http: false,
     https: false,
+    fs: false,
+    path: false,
     stream: false,
+    assert: false,
     crypto: false,
   };
   config.plugins = (config.plugins || []).concat([

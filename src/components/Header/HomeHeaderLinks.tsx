@@ -5,19 +5,32 @@ import logoImg from "img/everflow-logo.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { HeaderLink } from "./HeaderLink";
 
 type Props = {
   small?: boolean;
   clickCloseIcon?: () => void;
-  redirectPopupTimestamp: number;
-  showRedirectModal: (to: string) => void;
 };
 
 type HomeLink = { label: string; link: string; isHomeLink?: boolean | false };
 
-export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp, showRedirectModal }: Props) {
+export function HomeHeaderLinks({ small, clickCloseIcon }: Props) {  
   const HOME_MENUS: HomeLink[] = [
+    {
+      label: `App`,
+      isScroll: true
+    },
+    {
+      label: `Bridge`,
+      isScroll: false
+    },
+    {
+      label: `Swap`,
+      isScroll: true
+    },
+    {
+      label: `Roadmap`,
+      isScroll: true
+    },
   ];
   return (
     <div className="App-header-links">
@@ -34,20 +47,10 @@ export function HomeHeaderLinks({ small, clickCloseIcon, redirectPopupTimestamp,
           </div>
         </div>
       )}
-      {HOME_MENUS.map(({ link, label, isHomeLink = false }) => {
+      {HOME_MENUS.map(({ isScroll, label }) => {
         return (
           <div key={label} className="App-header-link-container">
-            {isHomeLink ? (
-              <HeaderLink
-                to={link}
-                redirectPopupTimestamp={redirectPopupTimestamp}
-                showRedirectModal={showRedirectModal}
-              >
-                {label}
-              </HeaderLink>
-            ) : (
-              <ExternalLink href={link}>{label}</ExternalLink>
-            )}
+            <ExternalLink scrollId={isScroll ? label.toLocaleLowerCase() : ""}>{label}</ExternalLink>
           </div>
         );
       })}

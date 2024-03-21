@@ -67,9 +67,9 @@ const Roadmap: React.FC = () => {
   };
 
   return (
-    <div className="roadmap-container">
+    <div className="roadmap-container" id="roadmap">
       <div className="roadmap-header">
-        <div className="roadmap-heeader-title">Company Roadmap</div>
+        <div className="roadmap-heeader-title">Roadmap</div>
         <div className="roadmap-header-divider"></div>
         <div className="roadmap-header-subtitle">World's Fastest</div>
       </div>

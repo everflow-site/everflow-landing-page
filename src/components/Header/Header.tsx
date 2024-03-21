@@ -31,21 +31,7 @@ const SLIDE_VARIANTS = {
 
 const TRANSITION = { duration: 0.2 };
 
-type Props = {
-  disconnectAccountAndCloseSettings: () => void;
-  openSettings: () => void;
-  redirectPopupTimestamp: number;
-  tradePageVersion: number;
-  showRedirectModal: (to: string) => void;
-};
-
-export function Header({
-  disconnectAccountAndCloseSettings,
-  openSettings,
-  redirectPopupTimestamp,
-  showRedirectModal,
-  tradePageVersion,
-}: Props) {
+export function Header() {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const [isNativeSelectorModalVisible, setIsNativeSelectorModalVisible] = useState(false);
 
@@ -101,7 +87,7 @@ export function Header({
               <img src={logoSmallImg} className="small" alt="Everflow Logo" />
               <div className="App-header-logo-title">EVERFLOW</div>
             </Link>
-              <HomeHeaderLinks redirectPopupTimestamp={redirectPopupTimestamp} showRedirectModal={showRedirectModal} />
+              <HomeHeaderLinks/>
           </div>
           <div className="App-header-container-right">
             <AppHeaderUser />
@@ -143,8 +129,6 @@ export function Header({
               <HomeHeaderLinks
                 small
                 clickCloseIcon={() => setIsDrawerVisible(false)}
-                redirectPopupTimestamp={redirectPopupTimestamp}
-                showRedirectModal={showRedirectModal}
               />
           </motion.div>
         )}

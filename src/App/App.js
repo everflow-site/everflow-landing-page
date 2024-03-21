@@ -18,9 +18,7 @@ function FullApp() {
     <>
       <div className="App">
         <div className="App-content">
-          <Header
-            tradePageVersion={2}
-          />
+          <Header/>
             <Switch>
               <Route path="/">
                 <Home />

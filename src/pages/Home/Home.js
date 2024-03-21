@@ -7,6 +7,9 @@ import transactionIcon from "img/transaction.png";
 import stockMarketIcon from "img/stock-market.png";
 import groupIcon from "img/liquidity.png";
 import uniswapIcon from "img/uniswap.png";
+import { SwapWidget } from '@uniswap/widgets'
+import '@uniswap/widgets/fonts.css'
+import MY_TOKEN_LIST from "../../constants"
 
 import LiquidityCard from "./LiquidityCard";
 import { useEffect, useState } from "react";
@@ -24,6 +27,16 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
         {children}
       </button>
     )
+  }
+
+  const theme = {
+    primary: '#000',
+    secondary: '#666',
+    container: '#FFF',
+    accent: "rgb(14, 80, 226)",
+    borderRadius: 0,
+    networkDefaultShadow: "rgb(14, 80, 226)",
+    accentSoft: "#FFF"
   }
 
   const formatter = new Intl.NumberFormat('en-US', {
@@ -70,9 +83,9 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   return (
     <div className="Home">
       <div className="Home-top">
-        <div className="background-image"></div>
+        <div className="background-image" ></div>
         <div className="Home-title-section-container default-container">
-          <div className="Home-title-section">
+          <div className="Home-title-section" id="app">
             <div className="Home-title">
               <div>
                 Decentralized
@@ -121,7 +134,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </div>
         </div>
       </div>
-      <div className="Home-cta-section">
+      <div className="Home-cta-section" id="swap">
         <div className="Home-cta-container default-container">
           <div className="Home-cta-info">
             <div className="Home-cta-info__title">
@@ -136,6 +149,16 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           </div>
           <div className="Home-cta-options">
             <div className="Home-cta-option">
+              {/* <div className="Uniswap">
+                  <SwapWidget 
+                    tokenList={MY_TOKEN_LIST} 
+                    defaultInputTokenAddress={"NATIVE"}
+                    defaultOutputTokenAddress={"0xf86cFCE1e746456135d7fACe48c2916D7D3cb676"}
+                    defaultChainId={1}
+                    theme={theme}
+                    routerUrl="https://api.uniswap.org/v1/quote?protocols=v2%2Cv3%2Cmixed&tokenInAddress=ETH&tokenInChainId=1&tokenOutAddress=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&tokenOutChainId=1"
+                  />
+              </div> */}
               <div className="Home-cta-option-icon">
                 <img src={uniswapIcon} width="90" alt="Uniswap Logo" />
               </div>
@@ -146,7 +169,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                   <button onClick={() => openLink("https://app.uniswap.org/swap?chain=mainnet&outputCurrency=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&inputCurrency=ETH")} className="Home-cta-option-action-btn">Get $EFT</button>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </div>

@@ -529,6 +529,11 @@
     height: auto;
   }
 
+  .Home-cta-container,
+  .Home-token-card-section {
+    flex-direction: column;
+  }
+
   .Home-token-card-option-action {
     display: grid;
     grid-template-columns: 1fr;
@@ -565,6 +570,11 @@
     grid-template-columns: 1fr;
     grid-row-gap: 1.5rem;
   }
+
+  .scan-link {
+    font-size: 1.2rem;
+  }
+  
   .Home-token-card-container {
     flex-direction: column;
   }
@@ -580,11 +590,6 @@
 @media (max-width: 500px) {
   .Home-title-section-container {
     padding-top: 7.4rem;
-  }
-
-  .Home-cta-container,
-  .Home-token-card-section {
-    flex-direction: column;
   }
 
   .Home-token-card-section {
