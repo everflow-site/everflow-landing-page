@@ -159,7 +159,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
                     routerUrl="https://api.uniswap.org/v1/quote?protocols=v2%2Cv3%2Cmixed&tokenInAddress=ETH&tokenInChainId=1&tokenOutAddress=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&tokenOutChainId=1"
                   />
               </div> */}
-              <iframe width="400" height="720" frameborder="0" allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *" src="https://flooz.xyz/embed/trade?swapDisabled=false&swapToTokenAddress=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&swapLockToToken=true&onRampDisabled=false&onRampAsDefault=false&onRampTokenAddress=eth&network=eth&lightMode=true&primaryColor=%230e50e2&backgroundColor=transparent&roundedCorners=6&padding=20" ></iframe>
+              <iframe width="400" height="720" frameborder="0" allow="clipboard-read *; clipboard-write *; web-share *; accelerometer *; autoplay *; camera *; gyroscope *; payment *; geolocation *" src="https://flooz.xyz/embed/trade?swapDisabled=false&swapToTokenAddress=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&swapLockToToken=true&onRampDisabled=false&onRampAsDefault=false&onRampTokenAddress=0xf86cFCE1e746456135d7fACe48c2916D7D3cb676&network=eth&lightMode=true&primaryColor=%230e50e2&backgroundColor=transparent&roundedCorners=6&padding=20" ></iframe>
               {/* <div className="Home-cta-option-icon">
                 <img src={uniswapIcon} width="90" alt="Uniswap Logo" />
               </div>
